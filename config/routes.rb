@@ -1,13 +1,9 @@
-Rails.application.routes.draw do
-  get 'pages/index'
-
-  get 'pages/contact'
-
-  get 'pages/about'
-
-  get 'pages/products'
-
-  get 'pages/areas'
+  Rails.application.routes.draw do
+  root to: 'pages#index'
+  get 'about' => 'pages#about', path: 'acerca'
+  get 'areas' => 'pages#areas', path: 'areas'
+  get 'contact' => 'pages#contact', path: 'contacto'
+  get 'products' => 'pages#products', path: 'products'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
